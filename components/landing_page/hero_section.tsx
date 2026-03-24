@@ -11,7 +11,7 @@ export default function HeroSection() {
                 Ready to elevate your English?
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-                Join GuiTeaaaaach today and start your journey towards fluency with personalized private lessons tailored to your specific goals and pace.
+                Join GuiTeach today and start your journey towards fluency with personalized private lessons tailored to your specific goals and pace.
             </p>
             <Button className="size-lg">
                 <LogIn className="w-6 h-6" />Log in
