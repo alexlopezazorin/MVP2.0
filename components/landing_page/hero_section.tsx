@@ -1,9 +1,10 @@
 import {Button} from "@/components/ui/button";
 import { LogIn } from "lucide-react";
+import Link from "next/link";
 import LoginForm from "@/features/auth/components/LoginForm"
 
 
-export default function HeroSection() {
+export default function HeroSection({ user }: { user: any }) {
   return (
     <section className="relative overflow-hidden bg-backgorund">
     <div className="wrapper" >
@@ -14,10 +15,17 @@ export default function HeroSection() {
             <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
                 Join GuiTeach today and start your journey towards fluency with personalized private lessons tailored to your specific goals and pace.
             </p>
-            <Button className="size-lg">
-                <LogIn className="w-6 h-6" />Sign In
-            </Button>
-            <LoginForm />
+            
+            {!user && (<LoginForm />)}
+
+            {user && (  
+            <Link href="/dashboard">
+                <Button variant="primary">
+                    Go to Dashboard
+                </Button>
+            </Link>
+            )}
+
         </div>
     </div>
     </section>

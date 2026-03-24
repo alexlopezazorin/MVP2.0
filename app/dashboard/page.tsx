@@ -1,4 +1,6 @@
-//dashboard page
+import { getUser } from "@/./lib/getUser"
+import { redirect } from "next/navigation"
+
 export default async function DashboardPage() {
 
   const user = await getUser()

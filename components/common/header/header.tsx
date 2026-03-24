@@ -1,6 +1,8 @@
 import {SparkleIcon, HomeIcon} from "lucide-react"
 import Link from "next/link"
 import {Button} from "@/components/ui/button";
+import LogoutButton from "./logout_button"
+import { getUser } from "@/lib/getUser"
 
 
 const Logo = () => {
@@ -16,7 +18,8 @@ const Logo = () => {
     );
 };
 
-export default function Header() {
+export default async function Header() {
+    const user = await getUser();
 
     return(
         <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-background-filter:bg-background/60">
@@ -28,9 +31,7 @@ export default function Header() {
                             <HomeIcon className="size-4" />
                             <span>Home</span>
                         </Link>
-                        <div className="flex items-center gap-3">
-                            <Button>Sign In</Button>
-                        </div>
+                        {user && <LogoutButton />}
                     </nav>
                 </div>
             </div>

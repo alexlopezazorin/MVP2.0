@@ -1,4 +1,6 @@
-//individual progress page
+import { getUser } from "@/./lib/getUser"
+import { redirect } from "next/navigation"
+
 export default async function IndividualProgress() {
 
   const user = await getUser()

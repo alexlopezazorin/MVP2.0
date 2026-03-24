@@ -1,10 +1,10 @@
-import {createSupabaseServer} from "./supabaseServer"
+import { createSupabaseServer } from "./supabaseServer"
 
 export async function getUser() {
-  const supabase = createSupabaseServer()
+  const supabase = await createSupabaseServer()
 
-  const{
-    data: {user},
+  const {
+    data: { user },
   } = await supabase.auth.getUser()
 
   return user
