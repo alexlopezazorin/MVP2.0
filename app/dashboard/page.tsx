@@ -1,5 +1,12 @@
 //dashboard page
-export default function Home() {
+export default async function DashboardPage() {
+
+  const user = await getUser()
+
+  if (!user) {
+    redirect("/")
+  }
+  
   return (
     <div>
       <h1>Dashboard page</h1>
