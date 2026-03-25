@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/common/header/header";
 import Footer from "@/components/common/footer";
+import CookieBanner from "@/components/cookie_banner";
 
 
 const outfit = Outfit({subsets:['latin']});
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
