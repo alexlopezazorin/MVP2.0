@@ -19,6 +19,11 @@ export default function HeroSection({ user }: { user: any }) {
             {!user && (
             <div className="flex flex-col items-center justify-center lg:py24 py12 text-center">
                 <LoginForm />
+                <Link href="/signup">
+                    <Button variant="outline">
+                        Sign Up
+                    </Button>
+                </Link>
                 <p className="text-sm text-muted-foreground mt-4 max-w-xl leading-relaxed">       
                     By using this platform you agree to our <Link href="/legal/terms_and_conditions" className="text-blue-900"> Terms & Conditions </Link> and <Link href="/legal/privacy_policy" className="text-blue-900"> Privacy Policy </Link>.
                 </p>
