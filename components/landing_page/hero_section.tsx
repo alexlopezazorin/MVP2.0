@@ -20,7 +20,7 @@ export default function HeroSection({ user }: { user: any }) {
             <div className="flex flex-col items-center justify-center lg:py24 py12 text-center">
                 <LoginForm />
                 <Link href="/signup">
-                    <Button variant="outline">
+                    <Button variant="outline" className="relative top-2">
                         Sign Up
                     </Button>
                 </Link>
